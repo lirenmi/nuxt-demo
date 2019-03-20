@@ -1,6 +1,7 @@
 <template>
   <div class="section">
-    <h1 class="title is-1">Post id: {{$route.params.id}} </h1>
+    <h1 class="title is-1">{{ post.title }}</h1>
+    <p>{{ post.description }}</p>
   </div>
 </template>
 
@@ -8,6 +9,11 @@
   export default {
     validate({ params }) {
       return /^\d+$/.test(params.id)
+    },
+
+    async asyncData({ $axios, params }) {
+      const post = await $axios.$get(`http://localhost:3333/posts/${params.id}`)
+      return { post }
     }
   }
 </script>
