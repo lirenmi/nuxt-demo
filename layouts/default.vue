@@ -2,10 +2,20 @@
   <div>
     <nav class="navbar">
       <div class="navbar-brand">
-        <a
-          href="http://coding8.io"
+        <nuxt-link
+          to="/"
           class="navbar-item"
-        >CODING8</a>
+        >
+          <h1 class="title is-5">CODING8</h1>
+        </nuxt-link>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <nuxt-link
+            to="/posts"
+            class="navbar-item"
+          >posts</nuxt-link>
+        </div>
       </div>
     </nav>
     <div>
