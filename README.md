@@ -1,22 +1,15 @@
 # nuxt-demo
 
-> My tiptop Nuxt.js project
+## 搭建 RESTful 接口（json-server）
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn run dev
-
-# build for production and launch server
-$ yarn run build
-$ yarn start
-
-# generate static project
-$ yarn run generate
+```
+  yarn global add json-server
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+构建 db.json 文件，放在项目 assets 目录
+
+在 assets 路径下，执行命令启动服务
+
+```shell
+json-server --watch assets/db.json --port 3333
+```
