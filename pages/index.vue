@@ -1,6 +1,9 @@
 <template>
-  <section class="section">
+  <section class="container">
     <h1 class="title">index</h1>
+    <div>
+      <nuxt-link to="/posts">list</nuxt-link>
+    </div>
   </section>
 </template>
 
@@ -14,7 +17,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped >
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -30,7 +33,7 @@ export default {
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  color: #6435d1;
   letter-spacing: 1px;
 }
 
