@@ -20,6 +20,11 @@
       } catch (e) {
         error({statusCode: 404, message: 'Post not found'})
       }
+    },
+    head() {
+      return {
+        title: this.post.title
+      }
     }
   }
 </script>

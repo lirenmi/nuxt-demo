@@ -37,6 +37,12 @@
     async asyncData( { $axios } ) {
       const posts = await $axios.$get('http://localhost:3333/posts')
       return { posts }
+    },
+
+    head() {
+      return {
+        title: 'List'
+      }
     }
   }
 </script>
