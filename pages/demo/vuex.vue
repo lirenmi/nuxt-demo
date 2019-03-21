@@ -2,7 +2,10 @@
   <div class="section">
     <div class="container">
       <h1 class="title i">{{ pageName }}</h1>
-      <span class="tag is-primary">{{ count }}</span>
+      <span
+        class="tag is-primary"
+        @click="add"
+      >{{ count }}</span>
     </div>
   </div>
 </template>
@@ -15,6 +18,11 @@
       },
       count() {
         return this.$store.state.demo.count
+      }
+    },
+    methods: {
+      add() {
+        this.$store.commit('demo/add', 2)
       }
     }
   }
