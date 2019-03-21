@@ -8,3 +8,9 @@ export const mutations = {
     state.count = state.count + payload
   }
 }
+
+export const actions = {
+  addAction(context, payload) {
+    context.commit('add', payload)
+  }
+}

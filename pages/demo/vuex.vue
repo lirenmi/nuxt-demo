@@ -4,7 +4,7 @@
       <h1 class="title i">{{ pageName }}</h1>
       <span
         class="tag is-primary"
-        @click="add"
+        @click="addAction"
       >{{ count }}</span>
     </div>
   </div>
@@ -23,6 +23,9 @@
     methods: {
       add() {
         this.$store.commit('demo/add', 2)
+      },
+      addAction() {
+        this.$store.dispatch('demo/addAction', 3)
       }
     }
   }
